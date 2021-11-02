@@ -1,0 +1,147 @@
+html, body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(29, 30, 32);
+    color: rgb(200, 200, 200)
+}
+
+a {
+    color: rgb(200, 200, 200);
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+h1 {
+    display: inline;
+}
+
+.logo h1 a {
+    font-size: 2rem;
+}
+
+.top-bar hr{
+    background-color: rgb(71, 71, 71);
+    border: none;
+    height: 1px;
+}
+
+.top-bar-container {
+    max-width: 960px;
+    padding: 0 1rem;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items:flex-end;
+}
+
+@media screen and (max-width: 600px) {
+
+    .logo h1 {
+        display: block;
+        padding-bottom: 0;
+    }
+    .logo .separator {
+        display:none;
+    }
+}
+
+.top-bar-container * {
+    padding: 1rem 0;
+    margin: 0;
+}
+
+.top-bar-container .separator {
+    padding: 0 .8rem;
+}
+
+.top-bar-container a {
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: rgb(218, 218, 219)
+}
+
+.top-bar-container a:visited{
+    color: rgb(218, 218, 219)
+}
+
+.top-bar-container a:hover {
+    text-decoration: underline;
+}
+
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 0.25rem;
+}
+
+.entry {
+    position: relative;
+    margin: 2rem 0;    
+    width: 100%;
+    border: 1px solid rgb(51, 51, 51);
+    border-radius: 0.5rem;
+    background-color: rgb(46, 46, 51);
+}
+
+.entry header {
+    padding: 1rem;
+}
+
+.entry section {
+    padding-left: 1rem;
+}
+
+.entry footer {
+    padding-left: 1rem;
+    font-size: 0.8rem;
+    padding-bottom: 1rem;
+}
+
+.entry a {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.entry header {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+footer {
+    max-width: 960px;
+    margin: 0 auto;
+    margin-top: 2rem;
+}
+
+footer p {
+    padding-left: 1rem;
+    font-size: 0.85rem;
+    color:rgb(120, 120, 120);
+    display: flex;
+    justify-content: space-between;
+}
+
+footer hr {
+    background-color: rgb(51, 51, 51);
+    border: none;
+    height: 2px;
+}
+
+.article {
+    line-height: 1.45rem;;
+    padding: 2rem 1rem;
+}
+
+code {
+    background-color: rgb(51, 51, 51);
+    font-size: 1rem;
+    border-radius: 0.25rem;
+    padding: 0 0.25rem;
+}
+
