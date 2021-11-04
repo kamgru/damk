@@ -1,6 +1,6 @@
 ﻿# Damk
 
->***Damk** - a Kashubian spirit that looks after the people, recluse people and those without a sense of humor*
+>***Damk** - a Kashubian spirit that looks after the silent, recluse people and those without a sense of humor*
 > 
 source [wikipedia](https://pl.wikipedia.org/wiki/Damk)
 
