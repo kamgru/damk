@@ -3,31 +3,35 @@ using Damk.Infrastructure;
 
 namespace Damk.App;
 
-public class Builder
+public class BlogBuilder
 {
-    private readonly ITemplateRetriever _templateRetriever = new TemplateRetriever();
+    private readonly IAssetsBuilder _assetsBuilder;
+    private readonly IDriverRetriever _driverRetriever;
+    private readonly IndexPageOutputFactory _indexPageOutputFactory;
+    private readonly PageOutputFactory _pageOutputFactory;
+    private readonly IPageWriter _pageWriter;
+    private readonly ITemplateRetriever _templateRetriever;
 
-    private readonly IDriverRetriever _driverRetriever = new DriverRetriever(
-        new PathResolver());
-
-    private readonly IPageWriter _pageWriter = new PageWriter();
-
-    private readonly PageOutputFactory _pageOutputFactory = new(
-        new ContentRetriever(),
-        new MarkdownConverter(),
-        new OutputFilenameBuilder(
-            new PathResolver()));
-
-    private readonly IndexPageOutputFactory _indexPageOutputFactory = new(new PathResolver());
-
-    private readonly IAssetsBuilder _assetsBuilder = new AssetsBuilder(
-        new PathResolver());
+    public BlogBuilder(
+        IAssetsBuilder assetsBuilder,
+        IDriverRetriever driverRetriever,
+        IndexPageOutputFactory indexPageOutputFactory,
+        PageOutputFactory pageOutputFactory,
+        IPageWriter pageWriter,
+        ITemplateRetriever templateRetriever)
+    {
+        _assetsBuilder = assetsBuilder;
+        _driverRetriever = driverRetriever;
+        _indexPageOutputFactory = indexPageOutputFactory;
+        _pageOutputFactory = pageOutputFactory;
+        _pageWriter = pageWriter;
+        _templateRetriever = templateRetriever;
+    }
 
     public void Build()
     {
         IEnumerable<Driver> articlesDrivers = _driverRetriever.GetAllArticles();
         IEnumerable<Driver> pageDrivers = _driverRetriever.GetAllPages();
-
 
         Directory.CreateDirectory("publish");
         Directory.CreateDirectory("publish/css");
