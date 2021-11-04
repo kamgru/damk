@@ -1,6 +1,6 @@
 ﻿---
 title: 'Big-Endian vs Little-Endian'
-published: 2021-10-30
+published: '2021-10-30'
 lead: 'If you've done any significant amount of programming, especially dealing with networking, you probably encountered the term 'Endiannes' and the inevitable follow up 'Big Endian' and 'Little Endian'. Althouth it sounds scary at first, the concept is pretty simple.'
 ---
 

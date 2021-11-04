@@ -1,7 +1,9 @@
 ﻿using Damk.Core;
 using Damk.Infrastructure;
 
-class Builder
+namespace Damk.App;
+
+public class Builder
 {
     private readonly ITemplateRetriever _templateRetriever = new TemplateRetriever();
 
@@ -20,7 +22,7 @@ class Builder
 
     private readonly IAssetsBuilder _assetsBuilder = new AssetsBuilder(
         new PathResolver());
-    
+
     public void Build()
     {
         IEnumerable<Driver> articlesDrivers = _driverRetriever.GetAllArticles();

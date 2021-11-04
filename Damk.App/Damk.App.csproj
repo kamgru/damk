@@ -7,7 +7,9 @@
     </PropertyGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\Damk.Core\Damk.Core.csproj" />
       <ProjectReference Include="..\Damk.Data\Damk.Data.csproj" />
+      <ProjectReference Include="..\Damk.Infrastructure\Damk.Infrastructure.csproj" />
     </ItemGroup>
 
 </Project>

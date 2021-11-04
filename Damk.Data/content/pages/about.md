@@ -1,6 +1,6 @@
 ﻿---
 title: 'about'
-published: 2021-11-01
+published: '2021-11-01'
 ---
 
 Hey, welcome. I'm Kamil Grudzień and I work as a Software Engineer. This blog is a place where I share things I learned or find valuable. 

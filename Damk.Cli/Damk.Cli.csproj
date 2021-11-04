@@ -8,10 +8,7 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <PackageReference Include="Markdig" Version="0.26.0" />
-    </ItemGroup>
-
-    <ItemGroup>
+      <ProjectReference Include="..\Damk.App\Damk.App.csproj" />
       <ProjectReference Include="..\Damk.Data\Damk.Data.csproj" />
       <ProjectReference Include="..\Damk.Infrastructure\Damk.Infrastructure.csproj" />
     </ItemGroup>

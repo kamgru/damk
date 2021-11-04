@@ -54,7 +54,7 @@ public class DriverRetriever : IDriverRetriever
                 throw new InvalidOperationException($"Error parsing {line} in {filename}");
             }
 
-            result[keyValueArray[0]] = keyValueArray[1].Trim().Replace("\'", "");
+            result[keyValueArray[0]] = keyValueArray[1].Trim()[1..^1];
         }
 
         return result;
